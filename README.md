@@ -1,5 +1,7 @@
 # Kohana PHP Framework - core
 
+Classes namespaced for 
+
 | ver   | Stable                                                                                                                       | Develop                                                                                                                        |
 |-------|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | 3.3.x | [![Build Status - 3.3/master](https://travis-ci.org/kohana/core.svg?branch=3.3%2Fmaster)](https://travis-ci.org/kohana/core) | [![Build Status - 3.3/develop](https://travis-ci.org/kohana/core.svg?branch=3.3%2Fdevelop)](https://travis-ci.org/kohana/core) |
