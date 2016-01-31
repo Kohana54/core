@@ -137,7 +137,7 @@ class Exception extends \Exception {
 	 * @param   int        $level
 	 * @return  void
 	 */
-	public static function log(\Exception $e, $level = \Log\Log::EMERGENCY)
+	public static function log(\Exception $e, $level = \Log::EMERGENCY)
 	{
 		if (is_object(Kohana::$log))
 		{

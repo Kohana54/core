@@ -596,6 +596,11 @@ class Request implements \HTTP_Request {
 	protected $_controller;
 
 	/**
+	 * @var  string  namespace of controller
+	 */
+	protected $_controller_prefix = 'Controller_';
+
+	/**
 	 * @var  string  action to be executed in the controller
 	 */
 	protected $_action;
@@ -864,6 +869,26 @@ class Request implements \HTTP_Request {
 	}
 
 	/**
+	 * Sets and gets the controller for the matched route.
+	 *
+	 * @param   string   $controller  Controller to execute the action
+	 * @return  mixed
+	 */
+	public function controller_prefix($prefix = NULL)
+	{
+		if ($prefix === NULL)
+		{
+			// Act as a getter
+			return $this->_controller_prefix;
+		}
+
+		// Act as a setter
+		$this->_controller_prefix = (string) $prefix;
+
+		return $this;
+	}
+
+	/**
 	 * Sets and gets the action for the controller.
 	 *
 	 * @param   string   $action  Action to execute the controller from
@@ -961,6 +986,11 @@ class Request implements \HTTP_Request {
 				{
 					// Controllers are in a sub-directory
 					$this->_directory = $params['directory'];
+				}
+
+				if (isset($params['controller_prefix']))
+				{
+					$this->_controller_prefix = $params['controller_prefix'];
 				}
 
 				// Store the controller

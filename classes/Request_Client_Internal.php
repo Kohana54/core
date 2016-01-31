@@ -31,7 +31,7 @@ class Request_Client_Internal extends \Request_Client {
 	public function execute_request(\Request $request, \Response $response)
 	{
 		// Create the class prefix
-		$prefix = 'Controller_';
+		$prefix = $request->controller_prefix();
 
 		// Directory
 		$directory = $request->directory();
