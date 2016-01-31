@@ -1,4 +1,6 @@
 <?php namespace Kohana\Core;
+use Monii\Interop\Container\Laravel\LaravelContainer;
+
 /**
  * Contains the most low-level helpers methods in Kohana:
  *
@@ -13,7 +15,7 @@
  * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
-class Core {
+class Core extends LaravelContainer {
 
 	// Release version and codename
 	const VERSION  = '3.3.4';

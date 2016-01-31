@@ -28,11 +28,11 @@
     "source": "http://github.com/kohana/core"
   },
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=5.4.0",
+    "monii/container-interop-laravel": "^1.0",
+    "psr/log": "^1.0"
   },
   "require-dev": {
-    "kohana/unittest": "3.3.*@dev",
-    "kohana/koharness": "*@dev"
   },
   "suggest": {
     "ext-http": "*",
